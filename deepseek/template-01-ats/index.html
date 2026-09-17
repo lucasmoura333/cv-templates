@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lucas Andrade — Full Stack Software Engineer</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <main class="resume" role="main" data-editable="true">
+
+    <!-- ============================================================
+         CABEÇALHO
+         ============================================================ -->
+    <header class="header">
+      <h1 class="header__name" data-field="cv.name">Lucas Andrade</h1>
+      <p class="header__role" data-field="cv.role">Full Stack Software Engineer</p>
+      <address class="header__contact">
+        <span class="header__contact-item" data-field="cv.location">São Paulo, SP — Brasil</span>
+        <span class="header__contact-sep">|</span>
+        <span class="header__contact-item">
+          <a href="mailto:email@example.com" data-field="cv.email">email@example.com</a>
+        </span>
+        <span class="header__contact-sep">|</span>
+        <span class="header__contact-item">
+          <a href="https://github.com/example" target="_blank" rel="noopener" data-field="cv.github">github.com/example</a>
+        </span>
+        <span class="header__contact-sep">|</span>
+        <span class="header__contact-item">
+          <a href="https://linkedin.com/in/example" target="_blank" rel="noopener" data-field="cv.linkedin">linkedin.com/in/example</a>
+        </span>
+      </address>
+    </header>
+
+    <!-- ============================================================
+         RESUMO
+         ============================================================ -->
+    <section class="section" aria-labelledby="summary-title">
+      <h2 class="section__title" id="summary-title">Resumo Profissional</h2>
+      <p class="summary" data-field="cv.summary">
+        Engenheiro de software full stack com 7+ anos de experiência construindo sistemas distribuídos
+        e aplicações web de alta escala. Especializado em TypeScript, Node.js e React, com histórico
+        comprovado na redução de latência, otimização de pipelines de dados e liderança técnica de
+        equipes multidisciplinares. Foco em arquitetura limpa, observabilidade e entrega contínua.
+      </p>
+    </section>
+
+    <!-- ============================================================
+         EXPERIÊNCIA
+         ============================================================ -->
+    <section class="section" aria-labelledby="experience-title">
+      <h2 class="section__title" id="experience-title">Experiência Profissional</h2>
+
+      <!-- Experiência 1 -->
+      <article class="experience-item" data-repeat="experience">
+        <div class="experience-item__header">
+          <span class="experience-item__company" data-field="company">TechNova Solutions</span>
+          <span class="experience-item__period" data-field="period">Mar 2022 — Presente</span>
+        </div>
+        <p class="experience-item__role" data-field="role">Senior Full Stack Engineer</p>
+        <p class="experience-item__location" data-field="location">São Paulo, SP — Remoto</p>
+        <ul class="experience-item__bullets" data-repeat="bullets">
+          <li>Redesenhou o pipeline de processamento de documentos usando workers assíncronos e Redis, reduzindo o tempo médio de processamento em 42%.</li>
+          <li>Liderou a migração de monolito Laravel para arquitetura de microsserviços em Node.js + NestJS, melhorando a escalabilidade horizontal em 3×.</li>
+          <li>Implementou observabilidade com OpenTelemetry e Grafana, reduzindo o MTTR de incidentes críticos de 45 para 12 minutos.</li>
+          <li>Mentorou 4 engenheiros júniores em boas práticas de código, testes automatizados e design de APIs REST.</li>
+        </ul>
+      </article>
+
+      <!-- Experiência 2 -->
+      <article class="experience-item" data-repeat="experience">
+        <div class="experience-item__header">
+          <span class="experience-item__company" data-field="company">DataFlow Systems</span>
+          <span class="experience-item__period" data-field="period">Jan 2020 — Fev 2022</span>
+        </div>
+        <p class="experience-item__role" data-field="role">Full Stack Developer</p>
+        <p class="experience-item__location" data-field="location">São Paulo, SP — Híbrido</p>
+        <ul class="experience-item__bullets" data-repeat="bullets">
+          <li>Desenvolveu dashboard analítico em React + Next.js consumindo APIs GraphQL, utilizado por 200+ clientes corporativos.</li>
+          <li>Otimizou consultas PostgreSQL com índices compostos e materialized views, reduzindo tempo de resposta em 65%.</li>
+          <li>Automatizou pipelines de CI/CD com GitHub Actions e Docker, diminuindo o tempo de deploy de 25 para 6 minutos.</li>
+          <li>Colaborou com equipe de produto na definição de requisitos técnicos e estimativas de esforço para sprints trimestrais.</li>
+        </ul>
+      </article>
+
+      <!-- Experiência 3 -->
+      <article class="experience-item" data-repeat="experience">
+        <div class="experience-item__header">
+          <span class="experience-item__company" data-field="company">StartupLab</span>
+          <span class="experience-item__period" data-field="period">Jun 2018 — Dez 2019</span>
+        </div>
+        <p class="experience-item__role" data-field="role">Backend Developer</p>
+        <p class="experience-item__location" data-field="location">Campinas, SP — Presencial</p>
+        <ul class="experience-item__bullets" data-repeat="bullets">
+          <li>Construiu APIs REST em Python (FastAPI) para plataforma de gestão financeira, processando 50k+ transações diárias.</li>
+          <li>Implementou sistema de filas com RabbitMQ para processamento assíncrono de relatórios, eliminando timeouts em horários de pico.</li>
+          <li>Escreveu testes unitários e de integração com cobertura de 85%, reduzindo bugs em produção em 40%.</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- ============================================================
+         HABILIDADES
+         ============================================================ -->
+    <section class="section" aria-labelledby="skills-title">
+      <h2 class="section__title" id="skills-title">Competências Técnicas</h2>
+      <div class="skills-grid">
+        <div class="skills-category" data-repeat="skills">
+          <span class="skills-category__label" data-field="group">Languages</span>
+          <span class="skills-category__items" data-field="items">TypeScript · JavaScript · Python · Java · SQL</span>
+        </div>
+        <div class="skills-category" data-repeat="skills">
+          <span class="skills-category__label" data-field="group">Backend</span>
+          <span class="skills-category__items" data-field="items">Node.js · NestJS · FastAPI · Laravel · REST APIs · GraphQL</span>
+        </div>
+        <div class="skills-category" data-repeat="skills">
+          <span class="skills-category__label" data-field="group">Frontend</span>
+          <span class="skills-category__items" data-field="items">React · Next.js · HTML · CSS · Tailwind CSS</span>
+        </div>
+        <div class="skills-category" data-repeat="skills">
+          <span class="skills-category__label" data-field="group">Data</span>
+          <span class="skills-category__items" data-field="items">PostgreSQL · MySQL · Redis · MongoDB · RabbitMQ</span>
+        </div>
+        <div class="skills-category" data-repeat="skills">
+          <span class="skills-category__label" data-field="group">Infrastructure</span>
+          <span class="skills-category__items" data-field="items">Docker · AWS (EC2, S3, Lambda) · CI/CD · GitHub Actions · OpenTelemetry</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         PROJETOS
+         ============================================================ -->
+    <section class="section" aria-labelledby="projects-title">
+      <h2 class="section__title" id="projects-title">Projetos Relevantes</h2>
+
+      <article class="project-item" data-repeat="projects">
+        <div class="project-item__header">
+          <span class="project-item__name" data-field="name">OpenMetrics Dashboard</span>
+          <span class="project-item__link" data-field="link">
+            <a href="https://github.com/example/openmetrics" target="_blank" rel="noopener">github.com/example/openmetrics</a>
+          </span>
+        </div>
+        <p class="project-item__description" data-field="description">
+          Dashboard open-source para visualização de métricas de aplicações em tempo real, com suporte a
+          múltiplas fontes de dados e alertas configuráveis. Utilizado por 500+ desenvolvedores.
+        </p>
+        <p class="project-item__tech" data-field="tech">TypeScript · React · Node.js · WebSocket · PostgreSQL</p>
+      </article>
+
+      <article class="project-item" data-repeat="projects">
+        <div class="project-item__header">
+          <span class="project-item__name" data-field="name">FastQueue</span>
+          <span class="project-item__link" data-field="link">
+            <a href="https://github.com/example/fastqueue" target="_blank" rel="noopener">github.com/example/fastqueue</a>
+          </span>
+        </div>
+        <p class="project-item__description" data-field="description">
+          Biblioteca leve de gerenciamento de filas para Node.js com suporte a Redis e RabbitMQ,
+          projetada para simplificar o processamento assíncrono em microsserviços.
+        </p>
+        <p class="project-item__tech" data-field="tech">Node.js · TypeScript · Redis · RabbitMQ</p>
+      </article>
+    </section>
+
+    <!-- ============================================================
+         FORMAÇÃO
+         ============================================================ -->
+    <section class="section" aria-labelledby="education-title">
+      <h2 class="section__title" id="education-title">Formação Acadêmica</h2>
+
+      <article class="education-item" data-repeat="education">
+        <div class="education-item__header">
+          <span class="education-item__course" data-field="course">Bacharelado em Ciência da Computação</span>
+          <span class="education-item__period" data-field="period">2014 — 2018</span>
+        </div>
+        <p class="education-item__institution" data-field="institution">Universidade Estadual de Campinas (UNICAMP)</p>
+      </article>
+
+      <article class="education-item" data-repeat="education">
+        <div class="education-item__header">
+          <span class="education-item__course" data-field="course">Especialização em Arquitetura de Software</span>
+          <span class="education-item__period" data-field="period">2019 — 2020</span>
+        </div>
+        <p class="education-item__institution" data-field="institution">Instituto Tecnológico de Aeronáutica (ITA)</p>
+      </article>
+    </section>
+
+    <!-- ============================================================
+         CERTIFICAÇÕES
+         ============================================================ -->
+    <section class="section" aria-labelledby="certifications-title">
+      <h2 class="section__title" id="certifications-title">Certificações</h2>
+      <ul class="cert-list" data-repeat="certifications">
+        <li>AWS Certified Solutions Architect — Associate (2023)</li>
+        <li>Node.js Application Development — OpenJS Foundation (2022)</li>
+        <li>Scrum Master Certified — Scrum Alliance (2021)</li>
+      </ul>
+    </section>
+
+    <!-- ============================================================
+         IDIOMAS
+         ============================================================ -->
+    <section class="section" aria-labelledby="languages-title">
+      <h2 class="section__title" id="languages-title">Idiomas</h2>
+      <div class="languages-list">
+        <div class="language-item" data-repeat="languages">
+          <span class="language-item__name" data-field="language">Português</span>
+          <span class="language-item__level" data-field="level">— Nativo</span>
+        </div>
+        <div class="language-item" data-repeat="languages">
+          <span class="language-item__name" data-field="language">Inglês</span>
+          <span class="language-item__level" data-field="level">— Avançado (C1)</span>
+        </div>
+        <div class="language-item" data-repeat="languages">
+          <span class="language-item__name" data-field="language">Espanhol</span>
+          <span class="language-item__level" data-field="level">— Intermediário (B1)</span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>

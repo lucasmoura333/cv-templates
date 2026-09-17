@@ -1,0 +1,80 @@
+{
+  "template_id": "deepseek/template-05-creative",
+  "collection": "deepseek",
+  "version": 1,
+  "name": "Creative Tech",
+  "description": "Header colorido, grid e cards de projeto. Personalidade para startups.",
+  "tags": [
+    "criativo",
+    "grid",
+    "startup"
+  ],
+  "page": {
+    "size": "A4",
+    "margin": "0"
+  },
+  "fonts": [
+    "Inter"
+  ],
+  "accent": "#d04a28",
+  "features": {
+    "columns": 1,
+    "ats_safe": false,
+    "page_break_rules": true,
+    "standalone": true
+  },
+  "files": {
+    "html": "index.html",
+    "css": "styles.css",
+    "preview": null
+  },
+  "data_contract": {
+    "attributes": {
+      "field": "data-field",
+      "repeat": "data-repeat",
+      "editable": "data-editable"
+    },
+    "fields": [
+      "cv.name",
+      "cv.role",
+      "cv.location",
+      "cv.email",
+      "cv.phone",
+      "cv.github",
+      "cv.linkedin",
+      "cv.summary"
+    ],
+    "repeats": {
+      "experience": [
+        "role",
+        "company",
+        "period",
+        "location",
+        "bullets"
+      ],
+      "projects": [
+        "name",
+        "link",
+        "description",
+        "tech"
+      ],
+      "education": [
+        "course",
+        "institution",
+        "period"
+      ],
+      "languages": [
+        "language",
+        "level"
+      ],
+      "skills": [
+        "group",
+        "items"
+      ],
+      "certifications": [
+        "name"
+      ]
+    }
+  },
+  "data_contract_implemented": false
+}

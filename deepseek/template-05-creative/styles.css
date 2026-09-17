@@ -1,0 +1,88 @@
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --sans:"Inter","Source Sans 3","Helvetica Neue",Arial,sans-serif;
+  --ink:#0f172a;--ink-2:#334155;--muted:#64748b;
+  --brand:#4f46e5;--brand-2:#7c3aed;
+  --brand-soft:#eef2ff;--line:#e2e8f0;
+}
+html{font-size:10pt;-webkit-font-smoothing:antialiased}
+body{font-family:var(--sans);color:var(--ink);background:#dde3ec;line-height:1.45;display:flex;justify-content:center;padding:20px 0}
+
+.resume{width:210mm;min-height:297mm;background:#fff;box-shadow:0 4px 18px rgba(0,0,0,.14);display:flex;flex-direction:column;overflow:hidden}
+
+/* HEADER em bloco de cor */
+.hd{background:linear-gradient(135deg,var(--brand) 0%,var(--brand-2) 100%);color:#fff;padding:14mm 16mm 12mm 16mm}
+.hd__name{font-size:24pt;font-weight:800;letter-spacing:-.02em;line-height:1.05}
+.hd__role{font-size:11pt;font-weight:500;color:#e0e7ff;margin-top:4pt;letter-spacing:.02em}
+.hd__meta{display:flex;flex-wrap:wrap;gap:6pt 16pt;margin-top:12pt;font-size:9pt}
+.hd__meta a{color:#e0e7ff;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.35)}
+.hd__meta a:hover{color:#fff;border-bottom-color:#fff}
+.hd__meta span{display:inline-flex;align-items:center;gap:4pt}
+
+/* Corpo */
+.body{padding:14mm 16mm 16mm 16mm;display:flex;flex-direction:column;gap:12pt;flex:1}
+
+/* Seções com barra lateral colorida */
+.sec__title{font-size:10.5pt;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--brand);margin-bottom:7pt;display:flex;align-items:center;gap:8pt}
+.sec__title::after{content:"";flex:1;height:2pt;background:var(--brand-soft);border-radius:2pt}
+
+.summary{font-size:10pt;line-height:1.55;color:var(--ink-2);background:var(--brand-soft);padding:10pt 12pt;border-radius:6pt;border-left:3pt solid var(--brand)}
+
+/* Experiência em cartões discretos */
+.job{padding:9pt 0;border-bottom:1px dashed var(--line);page-break-inside:avoid}
+.job:last-child{border-bottom:none;padding-bottom:0}
+.job__head{display:flex;justify-content:space-between;gap:8pt;flex-wrap:wrap;align-items:baseline}
+.job__role{font-weight:700;font-size:10.5pt;color:var(--ink)}
+.job__period{font-size:8.8pt;color:var(--brand);font-weight:600;background:var(--brand-soft);padding:1pt 6pt;border-radius:3pt;white-space:nowrap}
+.job__company{font-size:9.8pt;color:var(--ink-2);font-weight:600;margin-top:1pt}
+.job__loc{font-size:8.8pt;color:var(--muted);margin-bottom:5pt}
+.job__bullets{list-style:none}
+.job__bullets li{font-size:9.6pt;color:var(--ink-2);margin-bottom:3pt;padding-left:13pt;position:relative;line-height:1.5}
+.job__bullets li::before{content:"";position:absolute;left:0;top:6pt;width:5pt;height:5pt;background:var(--brand);border-radius:2pt;transform:rotate(45deg)}
+
+/* Skills em grid de chips */
+.skills{display:grid;grid-template-columns:repeat(2,1fr);gap:8pt}
+.skills__group{background:#f8fafc;border:1px solid var(--line);border-radius:6pt;padding:8pt 10pt}
+.skills__label{font-size:8.5pt;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--brand);margin-bottom:4pt;display:block}
+.skills__items{font-size:9.4pt;color:var(--ink-2);line-height:1.5}
+
+/* Projetos em grid 2 colunas */
+.projects{display:grid;grid-template-columns:1fr 1fr;gap:8pt}
+.proj{background:#f8fafc;border:1px solid var(--line);border-radius:6pt;padding:9pt 10pt;page-break-inside:avoid}
+.proj__name{font-weight:700;font-size:10pt;color:var(--ink)}
+.proj__link{font-size:8.4pt;color:var(--brand);display:block;margin-top:1pt;word-break:break-all}
+.proj__link a{color:var(--brand);text-decoration:none}
+.proj__link a:hover{text-decoration:underline}
+.proj__desc{font-size:9.2pt;color:var(--ink-2);margin-top:4pt;line-height:1.45}
+.proj__tech{font-size:8.4pt;color:var(--muted);margin-top:4pt;font-weight:600}
+
+/* Formação / Idiomas em 2 colunas */
+.two-col{display:grid;grid-template-columns:1.4fr 1fr;gap:16pt}
+.edu-item{margin-bottom:6pt}
+.edu-item__course{font-weight:700;font-size:9.8pt}
+.edu-item__inst{font-size:9.5pt;color:var(--ink-2)}
+.edu-item__period{font-size:8.5pt;color:var(--muted)}
+.lang-item{font-size:9.5pt;color:var(--ink-2);margin-bottom:3pt}
+.lang-item strong{color:var(--ink)}
+
+@page{size:A4;margin:0}
+@media print{
+  body{background:none;padding:0;display:block}
+  .resume{width:100%;min-height:auto;box-shadow:none}
+  .hd{background:var(--brand)!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  a{color:inherit;text-decoration:none;border:none!important}
+  .sec__title{page-break-after:avoid}
+  .job,.proj,.skills__group{page-break-inside:avoid}
+}
+@media screen and (max-width:820px){
+  body{padding:0}
+  .resume{width:100%;min-height:auto}
+  .hd{padding:22px 20px}
+  .hd__name{font-size:20pt}
+  .body{padding:20px}
+  .skills{grid-template-columns:1fr}
+  .projects{grid-template-columns:1fr}
+  .two-col{grid-template-columns:1fr;gap:10pt}
+  .job__head{flex-direction:column;gap:3pt}
+  .job__period{align-self:flex-start}
+}

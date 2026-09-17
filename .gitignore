@@ -1,0 +1,21 @@
+# dependências
+node_modules/
+.pnpm-store/
+.venv/
+__pycache__/
+
+# builds
+.next/
+out/
+dist/
+build/
+
+# SO
+.DS_Store
+Thumbs.db
+*Zone.Identifier
+desktop.ini
+
+# pacotes gerados
+templates-curriculo.zip
+templates-curriculo/

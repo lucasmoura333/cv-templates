@@ -1,0 +1,505 @@
+/* ============================================================
+       TEMPLATE A — ATS / CORPORATE
+       Filosofia: máxima legibilidade, uma coluna, zero ruído.
+       Prioridade: ATS → leitura humana → impressão.
+       ============================================================ */
+
+    /* ---------- Reset e configurações globais ---------- */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      /* Tipografia */
+      --font-family: "Inter", "Source Sans 3", "Noto Sans", "Helvetica Neue", Arial, sans-serif;
+      --font-size-base: 10.5pt;
+      --font-size-name: 22pt;
+      --font-size-role: 12pt;
+      --font-size-section: 11pt;
+      --font-size-company: 10.5pt;
+      --font-size-body: 10pt;
+      --font-size-small: 9pt;
+
+      --line-height-tight: 1.15;
+      --line-height-normal: 1.35;
+      --line-height-relaxed: 1.5;
+
+      /* Cores — funcionam em escala de cinza */
+      --color-text: #1a1a1a;
+      --color-text-secondary: #444444;
+      --color-text-muted: #666666;
+      --color-accent: #1a3a5c;
+      --color-border: #cccccc;
+      --color-border-light: #e0e0e0;
+
+      /* Espaçamento */
+      --space-xs: 2pt;
+      --space-sm: 4pt;
+      --space-md: 8pt;
+      --space-lg: 14pt;
+      --space-xl: 20pt;
+
+      /* Página A4 */
+      --page-width: 210mm;
+      --page-height: 297mm;
+      --page-margin-top: 18mm;
+      --page-margin-bottom: 18mm;
+      --page-margin-left: 20mm;
+      --page-margin-right: 20mm;
+    }
+
+    html {
+      font-size: var(--font-size-base);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      font-family: var(--font-family);
+      color: var(--color-text);
+      background: #f5f5f5;
+      line-height: var(--line-height-normal);
+      display: flex;
+      justify-content: center;
+      padding: 20px 0;
+    }
+
+    /* ---------- Container principal (simula A4) ---------- */
+    .resume {
+      width: var(--page-width);
+      min-height: var(--page-height);
+      background: #ffffff;
+      padding: var(--page-margin-top) var(--page-margin-right) var(--page-margin-bottom) var(--page-margin-left);
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+      position: relative;
+    }
+
+    /* ---------- Cabeçalho ---------- */
+    .header {
+      margin-bottom: var(--space-lg);
+      padding-bottom: var(--space-md);
+      border-bottom: 1.5pt solid var(--color-accent);
+    }
+
+    .header__name {
+      font-size: var(--font-size-name);
+      font-weight: 700;
+      line-height: var(--line-height-tight);
+      letter-spacing: -0.02em;
+      color: var(--color-text);
+      margin-bottom: var(--space-xs);
+    }
+
+    .header__role {
+      font-size: var(--font-size-role);
+      font-weight: 500;
+      color: var(--color-accent);
+      line-height: var(--line-height-tight);
+      margin-bottom: var(--space-sm);
+    }
+
+    .header__contact {
+      font-size: var(--font-size-small);
+      color: var(--color-text-secondary);
+      line-height: var(--line-height-relaxed);
+    }
+
+    .header__contact-item {
+      display: inline;
+      white-space: nowrap;
+    }
+
+    .header__contact-sep {
+      color: var(--color-border);
+      margin: 0 var(--space-sm);
+    }
+
+    .header__contact a {
+      color: var(--color-text-secondary);
+      text-decoration: none;
+      border-bottom: 0.5pt solid var(--color-border);
+    }
+
+    .header__contact a:hover {
+      color: var(--color-accent);
+      border-bottom-color: var(--color-accent);
+    }
+
+    /* ---------- Seções ---------- */
+    .section {
+      margin-bottom: var(--space-lg);
+    }
+
+    .section:last-of-type {
+      margin-bottom: 0;
+    }
+
+    .section__title {
+      font-size: var(--font-size-section);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--color-accent);
+      border-bottom: 0.75pt solid var(--color-border);
+      padding-bottom: var(--space-xs);
+      margin-bottom: var(--space-md);
+      line-height: var(--line-height-tight);
+      page-break-after: avoid;
+    }
+
+    /* ---------- Resumo ---------- */
+    .summary {
+      font-size: var(--font-size-body);
+      line-height: var(--line-height-relaxed);
+      color: var(--color-text);
+    }
+
+    /* ---------- Experiência ---------- */
+    .experience-item {
+      margin-bottom: var(--space-md);
+      page-break-inside: avoid;
+    }
+
+    .experience-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .experience-item__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: var(--space-sm);
+      margin-bottom: var(--space-xs);
+    }
+
+    .experience-item__company {
+      font-size: var(--font-size-company);
+      font-weight: 700;
+      color: var(--color-text);
+      line-height: var(--line-height-tight);
+    }
+
+    .experience-item__period {
+      font-size: var(--font-size-small);
+      color: var(--color-text-muted);
+      white-space: nowrap;
+      font-weight: 500;
+    }
+
+    .experience-item__role {
+      font-size: var(--font-size-body);
+      font-weight: 500;
+      color: var(--color-accent);
+      line-height: var(--line-height-tight);
+      margin-bottom: var(--space-xs);
+    }
+
+    .experience-item__location {
+      font-size: var(--font-size-small);
+      color: var(--color-text-muted);
+      margin-bottom: var(--space-sm);
+    }
+
+    .experience-item__bullets {
+      list-style: disc;
+      padding-left: 16pt;
+      font-size: var(--font-size-body);
+      line-height: var(--line-height-relaxed);
+      color: var(--color-text);
+    }
+
+    .experience-item__bullets li {
+      margin-bottom: var(--space-xs);
+      padding-left: 2pt;
+    }
+
+    .experience-item__bullets li::marker {
+      color: var(--color-accent);
+    }
+
+    /* ---------- Habilidades ---------- */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-sm);
+    }
+
+    .skills-category {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: var(--space-sm);
+      font-size: var(--font-size-body);
+      line-height: var(--line-height-normal);
+    }
+
+    .skills-category__label {
+      font-weight: 700;
+      color: var(--color-text);
+      min-width: 130pt;
+      flex-shrink: 0;
+    }
+
+    .skills-category__items {
+      color: var(--color-text-secondary);
+    }
+
+    /* ---------- Projetos ---------- */
+    .project-item {
+      margin-bottom: var(--space-md);
+      page-break-inside: avoid;
+    }
+
+    .project-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .project-item__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: var(--space-sm);
+      margin-bottom: var(--space-xs);
+    }
+
+    .project-item__name {
+      font-size: var(--font-size-body);
+      font-weight: 700;
+      color: var(--color-text);
+    }
+
+    .project-item__link {
+      font-size: var(--font-size-small);
+      color: var(--color-text-muted);
+    }
+
+    .project-item__link a {
+      color: var(--color-text-muted);
+      text-decoration: none;
+      border-bottom: 0.5pt solid var(--color-border-light);
+    }
+
+    .project-item__link a:hover {
+      color: var(--color-accent);
+    }
+
+    .project-item__description {
+      font-size: var(--font-size-body);
+      line-height: var(--line-height-relaxed);
+      color: var(--color-text);
+      margin-bottom: var(--space-xs);
+    }
+
+    .project-item__tech {
+      font-size: var(--font-size-small);
+      color: var(--color-text-muted);
+      font-style: italic;
+    }
+
+    /* ---------- Formação ---------- */
+    .education-item {
+      margin-bottom: var(--space-md);
+      page-break-inside: avoid;
+    }
+
+    .education-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .education-item__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: var(--space-sm);
+    }
+
+    .education-item__course {
+      font-size: var(--font-size-body);
+      font-weight: 700;
+      color: var(--color-text);
+    }
+
+    .education-item__period {
+      font-size: var(--font-size-small);
+      color: var(--color-text-muted);
+      white-space: nowrap;
+    }
+
+    .education-item__institution {
+      font-size: var(--font-size-body);
+      color: var(--color-text-secondary);
+    }
+
+    /* ---------- Idiomas ---------- */
+    .languages-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-md);
+      font-size: var(--font-size-body);
+    }
+
+    .language-item {
+      display: flex;
+      align-items: baseline;
+      gap: var(--space-sm);
+    }
+
+    .language-item__name {
+      font-weight: 600;
+      color: var(--color-text);
+    }
+
+    .language-item__level {
+      color: var(--color-text-muted);
+    }
+
+    /* ---------- Certificações ---------- */
+    .cert-list {
+      list-style: none;
+      padding: 0;
+      font-size: var(--font-size-body);
+      line-height: var(--line-height-relaxed);
+    }
+
+    .cert-list li {
+      margin-bottom: var(--space-xs);
+      padding-left: 12pt;
+      position: relative;
+    }
+
+    .cert-list li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: var(--color-accent);
+      font-weight: 700;
+    }
+
+    /* ============================================================
+       IMPRESSÃO — A4 / Letter
+       ============================================================ */
+    @page {
+      size: A4;
+      margin: 0;
+    }
+
+    @media print {
+      body {
+        background: none;
+        padding: 0;
+        display: block;
+      }
+
+      .resume {
+        width: 100%;
+        min-height: auto;
+        box-shadow: none;
+        padding: var(--page-margin-top) var(--page-margin-right) var(--page-margin-bottom) var(--page-margin-left);
+      }
+
+      .header__contact a {
+        color: var(--color-text-secondary);
+        border-bottom: none;
+      }
+
+      .project-item__link a {
+        color: var(--color-text-muted);
+        border-bottom: none;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      .section__title {
+        page-break-after: avoid;
+      }
+
+      .experience-item,
+      .project-item,
+      .education-item {
+        page-break-inside: avoid;
+      }
+
+      .experience-item__bullets li {
+        page-break-inside: avoid;
+      }
+    }
+
+    /* ============================================================
+       RESPONSIVIDADE — Mobile (não sacrifica impressão)
+       ============================================================ */
+    @media screen and (max-width: 800px) {
+      body {
+        padding: 0;
+      }
+
+      .resume {
+        width: 100%;
+        min-height: auto;
+        padding: 24px 20px;
+        box-shadow: none;
+      }
+
+      .header__name {
+        font-size: 20pt;
+      }
+
+      .header__contact-item {
+        display: block;
+        white-space: normal;
+      }
+
+      .header__contact-sep {
+        display: none;
+      }
+
+      .header__contact-item + .header__contact-item {
+        margin-top: 2px;
+      }
+
+      .experience-item__header {
+        flex-direction: column;
+        gap: 2px;
+      }
+
+      .experience-item__period {
+        white-space: normal;
+      }
+
+      .skills-category {
+        flex-direction: column;
+        gap: 2px;
+      }
+
+      .skills-category__label {
+        min-width: auto;
+      }
+
+      .project-item__header {
+        flex-direction: column;
+        gap: 2px;
+      }
+
+      .education-item__header {
+        flex-direction: column;
+        gap: 2px;
+      }
+
+      .education-item__period {
+        white-space: normal;
+      }
+
+      .languages-list {
+        flex-direction: column;
+        gap: var(--space-sm);
+      }
+    }

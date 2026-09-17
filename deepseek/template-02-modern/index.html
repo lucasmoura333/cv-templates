@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lucas Andrade — Full Stack Software Engineer</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main class="resume" role="main">
+
+  <!-- SIDEBAR -->
+  <aside class="side">
+    <h1 class="side__name">Lucas<br>Andrade</h1>
+    <p class="side__role">Full Stack<br>Software Engineer</p>
+
+    <div class="side__block">
+      <h2 class="side__title">Contato</h2>
+      <ul class="side__list">
+        <li>São Paulo, SP — Brasil</li>
+        <li><a href="mailto:email@example.com">email@example.com</a></li>
+        <li><a href="https://github.com/example">github.com/example</a></li>
+        <li><a href="https://linkedin.com/in/example">linkedin.com/in/example</a></li>
+      </ul>
+    </div>
+
+    <div class="side__block">
+      <h2 class="side__title">Competências</h2>
+      <span class="side__skill-label">Languages</span>
+      <p class="side__skill-items">TypeScript · JavaScript · Python · Java · SQL</p>
+      <span class="side__skill-label">Backend</span>
+      <p class="side__skill-items">Node.js · NestJS · FastAPI · Laravel · GraphQL</p>
+      <span class="side__skill-label">Frontend</span>
+      <p class="side__skill-items">React · Next.js · HTML · CSS · Tailwind</p>
+      <span class="side__skill-label">Data</span>
+      <p class="side__skill-items">PostgreSQL · MySQL · Redis · MongoDB</p>
+      <span class="side__skill-label">Infrastructure</span>
+      <p class="side__skill-items">Docker · AWS · CI/CD · OpenTelemetry</p>
+    </div>
+
+    <div class="side__block">
+      <h2 class="side__title">Idiomas</h2>
+      <ul class="side__list">
+        <li>Português — Nativo</li>
+        <li>Inglês — Avançado (C1)</li>
+        <li>Espanhol — Intermediário (B1)</li>
+      </ul>
+    </div>
+
+    <div class="side__block">
+      <h2 class="side__title">Certificações</h2>
+      <ul class="side__list">
+        <li>AWS Solutions Architect — Associate (2023)</li>
+        <li>Node.js App Development — OpenJS (2022)</li>
+      </ul>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <section class="main">
+
+    <section class="main__section">
+      <h2 class="main__title">Resumo</h2>
+      <p class="summary">
+        Engenheiro full stack com 7+ anos de experiência em sistemas distribuídos e aplicações
+        web de alta escala. Especializado em TypeScript, Node.js e React, com histórico de
+        redução de latência, otimização de pipelines e liderança técnica. Foco em arquitetura
+        limpa, observabilidade e entrega contínua.
+      </p>
+    </section>
+
+    <section class="main__section">
+      <h2 class="main__title">Experiência</h2>
+
+      <article class="job">
+        <div class="job__head">
+          <span class="job__company">TechNova Solutions</span>
+          <span class="job__period">Mar 2022 — Presente</span>
+        </div>
+        <p class="job__role">Senior Full Stack Engineer</p>
+        <p class="job__loc">São Paulo, SP — Remoto</p>
+        <ul class="job__bullets">
+          <li>Redesenhou pipeline de documentos com workers assíncronos e Redis, reduzindo tempo médio em 42%.</li>
+          <li>Liderou migração de monolito Laravel para microsserviços Node.js + NestJS, escalando 3×.</li>
+          <li>Implementou observabilidade com OpenTelemetry e Grafana, reduzindo MTTR de 45 para 12 min.</li>
+          <li>Mentorou 4 engenheiros júniores em testes automatizados e design de APIs REST.</li>
+        </ul>
+      </article>
+
+      <article class="job">
+        <div class="job__head">
+          <span class="job__company">DataFlow Systems</span>
+          <span class="job__period">Jan 2020 — Fev 2022</span>
+        </div>
+        <p class="job__role">Full Stack Developer</p>
+        <p class="job__loc">São Paulo, SP — Híbrido</p>
+        <ul class="job__bullets">
+          <li>Desenvolveu dashboard analítico em React + Next.js consumindo GraphQL para 200+ clientes.</li>
+          <li>Otimizou consultas PostgreSQL com índices compostos, reduzindo tempo de resposta em 65%.</li>
+          <li>Automatizou CI/CD com GitHub Actions e Docker, reduzindo deploy de 25 para 6 min.</li>
+        </ul>
+      </article>
+
+      <article class="job">
+        <div class="job__head">
+          <span class="job__company">StartupLab</span>
+          <span class="job__period">Jun 2018 — Dez 2019</span>
+        </div>
+        <p class="job__role">Backend Developer</p>
+        <p class="job__loc">Campinas, SP — Presencial</p>
+        <ul class="job__bullets">
+          <li>Construiu APIs REST em FastAPI processando 50k+ transações diárias.</li>
+          <li>Implementou filas RabbitMQ para relatórios assíncronos, eliminando timeouts em pico.</li>
+          <li>Elevou cobertura de testes para 85%, reduzindo bugs em produção em 40%.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="main__section">
+      <h2 class="main__title">Projetos</h2>
+
+      <article class="proj">
+        <span class="proj__name">OpenMetrics Dashboard</span>
+        <span class="proj__link"><a href="https://github.com/example/openmetrics">github.com/example/openmetrics</a></span>
+        <p class="proj__desc">Dashboard open-source para métricas em tempo real, com múltiplas fontes e alertas configuráveis. 500+ desenvolvedores ativos.</p>
+        <p class="proj__tech">TypeScript · React · Node.js · WebSocket · PostgreSQL</p>
+      </article>
+
+      <article class="proj">
+        <span class="proj__name">FastQueue</span>
+        <span class="proj__link"><a href="https://github.com/example/fastqueue">github.com/example/fastqueue</a></span>
+        <p class="proj__desc">Biblioteca leve de filas para Node.js com suporte a Redis e RabbitMQ para microsserviços.</p>
+        <p class="proj__tech">Node.js · TypeScript · Redis · RabbitMQ</p>
+      </article>
+    </section>
+
+    <section class="main__section">
+      <h2 class="main__title">Formação</h2>
+      <article class="edu">
+        <p class="edu__course">Bacharelado em Ciência da Computação</p>
+        <p class="edu__inst">Universidade Estadual de Campinas (UNICAMP)</p>
+        <p class="edu__period">2014 — 2018</p>
+      </article>
+      <article class="edu">
+        <p class="edu__course">Especialização em Arquitetura de Software</p>
+        <p class="edu__inst">Instituto Tecnológico de Aeronáutica (ITA)</p>
+        <p class="edu__period">2019 — 2020</p>
+      </article>
+    </section>
+
+  </section>
+</main>
+</body>
+</html>

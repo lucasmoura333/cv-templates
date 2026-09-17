@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lucas Andrade — Software Engineer</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main class="resume" role="main">
+
+  <header class="hd">
+    <div class="hd__top">
+      <h1 class="hd__name">Lucas Andrade</h1>
+      <span class="hd__role">Full Stack Software Engineer</span>
+    </div>
+    <div class="hd__meta">
+      <span>São Paulo, SP — Brasil</span>
+      <span><a href="mailto:email@example.com">email@example.com</a></span>
+      <span><a href="https://github.com/example">github.com/example</a></span>
+      <span><a href="https://linkedin.com/in/example">linkedin.com/in/example</a></span>
+    </div>
+  </header>
+
+  <section class="sec">
+    <h2 class="sec__title">Resumo</h2>
+    <p class="summary">
+      Engenheiro full stack com 7+ anos em sistemas distribuídos e aplicações web de alta escala.
+      Especializado em TypeScript, Node.js e React, com foco em arquitetura limpa, observabilidade
+      e entrega contínua. Histórico de redução de latência e liderança técnica.
+    </p>
+  </section>
+
+  <section class="sec">
+    <h2 class="sec__title">Experiência</h2>
+    <div class="timeline">
+
+      <article class="tl-item">
+        <div class="tl-item__head">
+          <span class="tl-item__role">Senior Full Stack Engineer</span>
+          <span class="tl-item__period">2022-03 → presente</span>
+        </div>
+        <p class="tl-item__company">TechNova Solutions</p>
+        <p class="tl-item__loc">São Paulo, SP — remoto</p>
+        <ul class="tl-item__bullets">
+          <li>Pipeline de documentos com workers assíncronos e Redis — 42% menos tempo médio.</li>
+          <li>Migração monolito Laravel → microsserviços Node.js + NestJS — 3× de escala.</li>
+          <li>Observabilidade com OpenTelemetry + Grafana — MTTR 45 → 12 min.</li>
+          <li>Mentoria de 4 engenheiros júniores em testes e design de APIs REST.</li>
+        </ul>
+      </article>
+
+      <article class="tl-item">
+        <div class="tl-item__head">
+          <span class="tl-item__role">Full Stack Developer</span>
+          <span class="tl-item__period">2020-01 → 2022-02</span>
+        </div>
+        <p class="tl-item__company">DataFlow Systems</p>
+        <p class="tl-item__loc">São Paulo, SP — híbrido</p>
+        <ul class="tl-item__bullets">
+          <li>Dashboard analítico React + Next.js consumindo GraphQL — 200+ clientes.</li>
+          <li>Otimização PostgreSQL com índices compostos — 65% menos tempo de resposta.</li>
+          <li>CI/CD com GitHub Actions + Docker — deploy 25 → 6 min.</li>
+        </ul>
+      </article>
+
+      <article class="tl-item">
+        <div class="tl-item__head">
+          <span class="tl-item__role">Backend Developer</span>
+          <span class="tl-item__period">2018-06 → 2019-12</span>
+        </div>
+        <p class="tl-item__company">StartupLab</p>
+        <p class="tl-item__loc">Campinas, SP — presencial</p>
+        <ul class="tl-item__bullets">
+          <li>APIs REST em FastAPI — 50k+ transações/dia.</li>
+          <li>Filas RabbitMQ para relatórios assíncronos — timeouts eliminados em pico.</li>
+          <li>Cobertura de testes 85% — 40% menos bugs em produção.</li>
+        </ul>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="sec">
+    <h2 class="sec__title">Stack</h2>
+    <div class="skills">
+      <span class="skills__label">languages</span>
+      <span class="skills__items"><span class="chip">TypeScript</span><span class="chip">JavaScript</span><span class="chip">Python</span><span class="chip">Java</span><span class="chip">SQL</span></span>
+      <span class="skills__label">backend</span>
+      <span class="skills__items"><span class="chip">Node.js</span><span class="chip">NestJS</span><span class="chip">FastAPI</span><span class="chip">Laravel</span><span class="chip">GraphQL</span><span class="chip">REST</span></span>
+      <span class="skills__label">frontend</span>
+      <span class="skills__items"><span class="chip">React</span><span class="chip">Next.js</span><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">Tailwind</span></span>
+      <span class="skills__label">data</span>
+      <span class="skills__items"><span class="chip">PostgreSQL</span><span class="chip">MySQL</span><span class="chip">Redis</span><span class="chip">MongoDB</span><span class="chip">RabbitMQ</span></span>
+      <span class="skills__label">infra</span>
+      <span class="skills__items"><span class="chip">Docker</span><span class="chip">AWS</span><span class="chip">CI/CD</span><span class="chip">OpenTelemetry</span></span>
+    </div>
+  </section>
+
+  <section class="sec">
+    <h2 class="sec__title">Projetos</h2>
+
+    <article class="proj">
+      <div class="proj__head">
+        <span class="proj__name">OpenMetrics Dashboard</span>
+        <span class="proj__link"><a href="https://github.com/example/openmetrics">github.com/example/openmetrics</a></span>
+      </div>
+      <p class="proj__desc">Dashboard open-source para métricas em tempo real, múltiplas fontes e alertas configuráveis. 500+ devs ativos.</p>
+      <p class="proj__tech">TypeScript · React · Node.js · WebSocket · PostgreSQL</p>
+    </article>
+
+    <article class="proj">
+      <div class="proj__head">
+        <span class="proj__name">FastQueue</span>
+        <span class="proj__link"><a href="https://github.com/example/fastqueue">github.com/example/fastqueue</a></span>
+      </div>
+      <p class="proj__desc">Biblioteca leve de filas para Node.js com suporte a Redis e RabbitMQ.</p>
+      <p class="proj__tech">Node.js · TypeScript · Redis · RabbitMQ</p>
+    </article>
+  </section>
+
+  <section class="sec">
+    <h2 class="sec__title">Formação & Idiomas</h2>
+    <div class="two-col">
+      <div>
+        <div class="edu-item">
+          <p class="edu-item__course">Bacharelado em Ciência da Computação</p>
+          <p class="edu-item__inst">UNICAMP</p>
+          <p class="edu-item__period">2014 — 2018</p>
+        </div>
+        <div class="edu-item">
+          <p class="edu-item__course">Especialização em Arquitetura de Software</p>
+          <p class="edu-item__inst">ITA</p>
+          <p class="edu-item__period">2019 — 2020</p>
+        </div>
+      </div>
+      <div>
+        <p class="lang-item"><strong>Português</strong> — Nativo</p>
+        <p class="lang-item"><strong>Inglês</strong> — Avançado (C1)</p>
+        <p class="lang-item"><strong>Espanhol</strong> — Intermediário (B1)</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+</body>
+</html>

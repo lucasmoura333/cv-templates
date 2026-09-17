@@ -1,0 +1,80 @@
+{
+  "template_id": "openia/template-05-creative-tech",
+  "collection": "openia",
+  "version": 1,
+  "name": "Creative Tech",
+  "description": "Marca gráfica, cards e stack em chips.",
+  "tags": [
+    "criativo",
+    "cards",
+    "startup"
+  ],
+  "page": {
+    "size": "A4",
+    "margin": "0"
+  },
+  "fonts": [
+    "Arial"
+  ],
+  "accent": "#d04a28",
+  "features": {
+    "columns": 2,
+    "ats_safe": false,
+    "page_break_rules": true,
+    "standalone": true
+  },
+  "files": {
+    "html": "index.html",
+    "css": "styles.css",
+    "preview": "preview.pdf"
+  },
+  "data_contract": {
+    "attributes": {
+      "field": "data-field",
+      "repeat": "data-repeat",
+      "editable": "data-editable"
+    },
+    "fields": [
+      "cv.name",
+      "cv.role",
+      "cv.location",
+      "cv.email",
+      "cv.phone",
+      "cv.github",
+      "cv.linkedin",
+      "cv.summary"
+    ],
+    "repeats": {
+      "experience": [
+        "role",
+        "company",
+        "period",
+        "location",
+        "bullets"
+      ],
+      "projects": [
+        "name",
+        "link",
+        "description",
+        "tech"
+      ],
+      "education": [
+        "course",
+        "institution",
+        "period"
+      ],
+      "languages": [
+        "language",
+        "level"
+      ],
+      "skills": [
+        "group",
+        "items"
+      ],
+      "certifications": [
+        "name"
+      ]
+    }
+  },
+  "data_contract_implemented": false
+}

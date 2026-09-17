@@ -1,0 +1,80 @@
+{
+  "template_id": "openia/template-01-ats-corporate",
+  "collection": "openia",
+  "version": 1,
+  "name": "ATS Corporate",
+  "description": "Conservador, uma coluna, foco em triagem automatizada.",
+  "tags": [
+    "ats",
+    "1-coluna",
+    "corporativo"
+  ],
+  "page": {
+    "size": "A4",
+    "margin": "0"
+  },
+  "fonts": [
+    "Arial"
+  ],
+  "accent": "#1f4e79",
+  "features": {
+    "columns": 1,
+    "ats_safe": true,
+    "page_break_rules": true,
+    "standalone": true
+  },
+  "files": {
+    "html": "index.html",
+    "css": "styles.css",
+    "preview": "preview.pdf"
+  },
+  "data_contract": {
+    "attributes": {
+      "field": "data-field",
+      "repeat": "data-repeat",
+      "editable": "data-editable"
+    },
+    "fields": [
+      "cv.name",
+      "cv.role",
+      "cv.location",
+      "cv.email",
+      "cv.phone",
+      "cv.github",
+      "cv.linkedin",
+      "cv.summary"
+    ],
+    "repeats": {
+      "experience": [
+        "role",
+        "company",
+        "period",
+        "location",
+        "bullets"
+      ],
+      "projects": [
+        "name",
+        "link",
+        "description",
+        "tech"
+      ],
+      "education": [
+        "course",
+        "institution",
+        "period"
+      ],
+      "languages": [
+        "language",
+        "level"
+      ],
+      "skills": [
+        "group",
+        "items"
+      ],
+      "certifications": [
+        "name"
+      ]
+    }
+  },
+  "data_contract_implemented": false
+}
